@@ -83,7 +83,7 @@ This method is not yet supported.
 2. Execute following `git submodule add https://github.com/erikkamph/menu`. This will add the project as a submodule for your project.
 3. Check that it has been added by running `git status`
 
-##### Disclaimer
+##### Important regarding submodules
 None of the code will follow for users of your project when using submodules.
 Users that clone afterwards will need following steps:
 1. `git submodule init`
