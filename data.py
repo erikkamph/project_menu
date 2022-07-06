@@ -17,7 +17,37 @@ import curses
 
 class MenuItem():
     """
-    TODO: Write a docstring
+    A basic menu item for use with a normal
+    menu that can or might have submenus in
+    it.
+
+    Functions
+    ---------
+    __init__(self, action, title, position, fargs)
+    __str__(self)
+    set_active(self, position)
+    get_style(self)
+    take_action(self)
+
+    Parameters
+    ----------
+    self : Any
+        An object pointing to an instance
+        of this class.
+    action : Func
+        A pointer to a function to execute
+        once the menu item is selected by 
+        the user.
+    title : str
+        A string which should be displayed
+        in the menu when drawing it on screen
+    position : int
+        An integer which is used to determine
+        whether the menu item is active or not.
+    fargs : tuple
+        A tuple with extra items that should be
+        sent further to the action when the item
+        is selected, works almost like a pipe
     """
 
     def __init__(self, action, title, position, fargs):

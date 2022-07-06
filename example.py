@@ -9,7 +9,13 @@ from menu import ApplicationMenu
 
 def multi_selection(stdscr):
     """
-    TODO: Write a docstring
+    This function creates and presents the user
+    with an example menu where you can select
+    multiple items. If the user selects "Cancel",
+    nothing is returned. However, if the user
+    selects "Done", then it returns whatever is
+    selected, if nothing is selected then [] is
+    returned. 
     """
     curses.start_color()
     curses.use_default_colors()
@@ -27,7 +33,13 @@ def multi_selection(stdscr):
 
 def single_selection(stdscr):
     """
-    TODO: Write a docstring
+    This function creates and presents the user
+    with an example menu where you can select
+    one item out of a list of items. If the user
+    selects "Cancel", then nothing will be returned.
+    However, if the user selects anything else the
+    title for that item will be returned and not
+    the menu item instance.
     """
     curses.start_color()
     curses.use_default_colors()
@@ -46,7 +58,14 @@ def single_selection(stdscr):
 
 def normal_menu(stdscr):
     """
-    TODO: Write a docstring
+    This function creates a menu and presents
+    the user with a normal menu that has sub-
+    menus. Whenever the user goes to a specific
+    item that does not contain a submenu, the
+    action for that item is executed. If the
+    item contains a pointer to a submenu, that
+    submenu will then be drawn on screen and 
+    the main menu will wait in the background.
     """
     curses.start_color()
     curses.use_default_colors()

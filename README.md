@@ -54,6 +54,41 @@ six==1.16.0
 More requirements can be found in [requirements.txt](/requirements.txt)
 
 ### Installation
+When installing in your own project, be sure to follow one of following steps:
+1. [Cloning the project and installing](#cloning-and-installing)
+2. [Using PyPI (Not yet supported)](#using-pypi)
+3. [As a submodule in your own project](#creating-a-submodule-in-project)
+4. [Using setup.py to install (Not yet supported)](#using-setup-file-to-install)
+
+#### Cloning and installing
+1. Change directory to your own project where you are going to use the module
+2. `git clone https://github.com/erikkamph/menu`
+3. Add following lines to the file(s) where you are going to use the menu:
+```python
+from data import MenuItem, ItemSingleSelection, ItemMultiSelection
+from menu import ApplicationMenu
+```
+4. See [example.py](/example.py) for examples on how to setup the menu
+5. Add `/menu/` to a `.gitignore` file as it should not be pushed to your own git repository, do this for every `.gitignore`.
+
+#### Using PyPI
+This method is not yet supported.
+
+#### Creating a submodule in project
+1. Enter the same git directory as your own project you want to add this to
+2. Execute following `git submodule add https://github.com/erikkamph/menu`. This will add the project as a submodule for your project.
+3. Check that it has been added by running `git status`
+
+##### Disclaimer
+None of the code will follow for users of your project when using submodules.
+Users that clone afterwards will need following steps:
+1. `git submodule init`
+2. `git submodule update`
+The steps for all of this can be found at [Git - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+
+#### Using setup file to install
+This method is not yet supported even though there is a [setup.py](/setup.py) file in the project.
+The reason for this is that there are some information missing in the [setup.py](/setup.py) file.
 
 ### Previews
 #### Example 1
