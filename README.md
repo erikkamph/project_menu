@@ -1,10 +1,12 @@
 ## Table of contents
 1. [Project Structure](#project-structure)
-  1. [Examples](#examples)
-  2. [Menu and data](#menu-and-data)
-  3. [Requirements](#requirements)
+    1. [Examples](#examples)
+    2. [Menu and data](#menu-and-data)
+    3. [Requirements](#requirements)
 2. [Installation](#installation)
 3. [Previews](#previews)
+    1. [Example 1](#example-1)
+    2. [Example 2](#example-2)
 4. [License](#license)
 
 ### Project Structure
