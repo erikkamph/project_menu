@@ -85,9 +85,11 @@ This method is not yet supported.
 
 ##### Important regarding submodules
 None of the code will follow for users of your project when using submodules.
+
 Users that clone afterwards will need following steps:
 1. `git submodule init`
 2. `git submodule update`
+
 The steps for all of this can be found at [Git - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 
 #### Using setup file to install
