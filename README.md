@@ -1,21 +1,26 @@
 ## Table of contents
-1. [Project Structure](#project-structure)
+1. [TODO](#todo)
+2. [Project Structure](#project-structure)
     1. [Examples](#examples)
     2. [Menu and data](#menu-and-data)
     3. [Requirements](#requirements)
-2. [Installation](#installation)
+3. [Installation](#installation)
     1. [Cloning the project and installing](#cloning-and-installing)
     2. [Using PyPI (Not yet supported)](#using-pypi)
     3. [As a submodule in your own project](#creating-a-submodule-in-project)
     4. [Using setup.py to install (Not yet supported)](#using-setup-file-to-install)
-3. [Previews](#previews)
+4. [Previews](#previews)
     1. [Example 1](#example-1)
     2. [Example 2](#example-2)
     3. [Example 3](#example-3)
     4. [Example 4](#example-4)
     5. [Example 5](#example-5)
     6. [Example 6](#example-6)
-4. [License](#license)
+5. [License](#license)
+
+### TODO
+- [ ] Fix [setup.py](/setup.py)
+- [ ] Fix bugs that might appear over time
 
 ### Project Structure
 ```
