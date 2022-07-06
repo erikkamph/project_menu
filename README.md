@@ -50,11 +50,22 @@ More requirements can be found in [requirements.txt](/requirements.txt)
 ### Installation
 
 ### Previews
+#### Example 1
 ![Example 1](/images/Example1.png)
+
+#### Example 2
 ![Example 2](/images/Example2.png)
+
+#### Example 3
 ![Example 3](/images/Example3.png)
+
+#### Example 4
 ![Example 4](/images/Example4.png)
+
+#### Example 5
 ![Example 5](/images/Example5.png)
+
+#### Example 6
 ![Example 6](/images/Example6.png)
 
 ### License
