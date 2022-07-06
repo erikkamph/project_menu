@@ -5,6 +5,7 @@
   3. [Requirements](#requirements)
 2. [Installation](#installation)
 3. [Previews](#previews)
+4. [License](#license)
 
 ### Project Structure
 ```
@@ -55,3 +56,8 @@ More requirements can be found in [requirements.txt](/requirements.txt)
 ![Example 4](/images/Example4.png)
 ![Example 5](/images/Example5.png)
 ![Example 6](/images/Example6.png)
+
+### License
+The program was licensed under the MIT license,
+for more information see [LICENSE.md](/LICENSE.md)
+or visit [choosealicense.com](https://choosealicense.com/licenses/mit/).
