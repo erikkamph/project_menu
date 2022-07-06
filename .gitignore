@@ -210,3 +210,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Other directories and files to ignore
+/.idea/
