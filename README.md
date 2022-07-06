@@ -34,7 +34,7 @@ that are available are:
 3. Multiple selection menu
 
 #### Menu and data
-menu.py and data.py contains the necceessary information
+[menu.py](/menu.py) and [data.py](/data.py) contains the necceessary information
 to create your own menus. You can choose from the same
 menu types as in the [previews](#previews), or define
 your own menu item by extending MenuItem class from
