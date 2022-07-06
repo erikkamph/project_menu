@@ -8,7 +8,7 @@ setup(
     version="1.0.0",
     author="Erik"
     author_email="", # Empty for now as the setup.py is not supposed to be used yet.
-    description="A commandline menu program written for users that love commandline in Python using curses.",
+    description="A command line menu program written for users that love command line in Python using curses.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/erikkamph/menu",
