@@ -8,7 +8,61 @@ from data import ItemMultiSelection, ItemSingleSelection, MenuItem
 
 class ApplicationMenu():
     """
-    TODO: Write a docstring
+    This is the class for the menu.
+    The class handles both drawing
+    and capturing keystrokes. If you
+    want to change the functionality
+    it is suggested that you extend
+    and override the specific functions
+    from this class that you want to change.
+
+    Functions
+    ---------
+    __init__ : self, stdscr, args
+        Initiailizes the instance of the class
+        with the information given, it requires
+        items and an standard screen from curses.
+        The standard screen from curses can be
+        obtained from curses.wrapper or similar.
+    show_menu : self
+        Prints the menu on the screen for the
+        end user and stops to capture a keystroke
+        which will determine the action to take.
+    actions : self
+        Reads the keystroke from the end user
+        and either moves up or down one position
+        in the menu. It can also execute any action
+        that the menu item has, mark the item as
+        selected or return a list or a single item.
+    exit_menu : self
+        This changes one variable that determines
+        whether the loop that presents the menu
+        should be on or off. The variable will
+        be set to an off state using this function,
+        which means that the menu will exit.
+    remark_items : self
+        It goes through all menu items and sends
+        the current position to all of them. Each
+        item will then check wether it is located
+        at that position or not. Each item will
+        also check if it's already active or not.
+        If it has the position number that matches
+        or is active then it will change state.
+
+    Parameters
+    ----------
+    stdscr : Any
+        An object which lets the class
+        draw items on screen.
+    args : List/Tuple
+        A tuple or a list of objects
+        that would otherwise make the
+        argument list too long.
+    
+    Returns
+    -------
+    An initialized instance of the class
+    ApplicationMenu.
     """
 
     def __init__(self, stdscr, args=()):
@@ -38,7 +92,25 @@ class ApplicationMenu():
 
     def show_menu(self):
         """
-        TODO: Write a docstring
+        Presents the menu to the end user.
+
+        The function clears the screen and
+        writes the title as well as all the
+        menu items that it has from the time
+        of being created. It uses str function
+        on each item as that is coded as __str__
+        which returns a specific string for
+        each type of menu item. It also looks
+        at the style for each menu item, whether
+        the item is selected or not and active
+        or not.
+
+        Parameters
+        ----------
+        self : class
+            A Pointer to the class itself to be able
+            to access all the neccessary items set
+            in the class.
         """
         data = None
         self.remark_items()
@@ -57,7 +129,11 @@ class ApplicationMenu():
 
     def actions(self):
         """
-        TODO: Write a docstring
+        After rendering the menu for the user, it will stop
+        and start capturing keys from the user. The key stroke
+        will then be used to determine what to do based on the
+        different types of menu items as well as the position
+        and whether or not to exit the menu.
         """
         key = self.stdscr.getkey()
         current_item = self.items[self.cursor_position]
@@ -94,13 +170,16 @@ class ApplicationMenu():
 
     def exit_menu(self):
         """
-        TODO: Write a docstring
+        Stops the loop that draws and captures
+        the user keystrokes and menu.
         """
         self.loop = False
 
     def remark_items(self):
         """
-        TODO: Write a docstring
+        Set all menu items as inactive except
+        for the menu item that is on the current
+        position. 
         """
         for item in self.items:
             item.set_active(self.cursor_position)
