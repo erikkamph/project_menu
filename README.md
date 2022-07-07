@@ -19,19 +19,34 @@
 5. [License](#license)
 
 ### TODO
-- [ ] Fix [setup.py](/setup.py)
+- [ ] Fix [setup.py](/src/menu_zerobeef/setup.py)
 - [ ] Fix bugs that might appear over time
 
 ### Project Structure
 ```
 .
+├── LICENSE.md
 ├── README.md
-├── __init__.py
-├── data.py
-├── example.py
-├── main.py
-├── menu.py
-└── requirements.txt
+├── images
+│   ├── Example1.png
+│   ├── Example2.png
+│   ├── Example3.png
+│   ├── Example4.png
+│   ├── Example5.png
+│   └── Example6.png
+├── pyproject.toml
+├── requirements.txt
+├── src
+│   └── menu_zerobeef
+│       ├── Pipfile
+│       ├── Pipfile.lock
+│       ├── __init__.py
+│       ├── data.py
+│       ├── example.py
+│       ├── main.py
+│       ├── menu.py
+│       └── setup.py
+└── tests
 ```
 
 #### Examples
@@ -43,11 +58,11 @@ that are available are:
 3. Multiple selection menu
 
 #### Menu and data
-[menu.py](/menu.py) and [data.py](/data.py) contains the necceessary information
+[menu.py](/src/menu_zerobeef/menu.py) and [data.py](/src/menu_zerobeef/data.py) contains the necceessary information
 to create your own menus. You can choose from the same
 menu types as in the [previews](#previews), or define
 your own menu item by extending MenuItem class from
-[data.py](/data.py).
+[data.py](/src/menu_zerobeef/data.py).
 
 #### Requirements
 Following is a shorter version of the requirements
@@ -60,7 +75,7 @@ icecream==2.1.2
 Pygments==2.12.0
 six==1.16.0
 ```
-More requirements can be found in [requirements.txt](/requirements.txt)
+More requirements can be found in [requirements.txt](/src/menu_zerobeef/requirements.txt)
 
 ### Installation
 When installing in your own project, be sure to follow one of following steps:
@@ -77,7 +92,7 @@ When installing in your own project, be sure to follow one of following steps:
 from data import MenuItem, ItemSingleSelection, ItemMultiSelection
 from menu import ApplicationMenu
 ```
-4. See [example.py](/example.py) for examples on how to setup the menu
+4. See [example.py](/src/menu_zerobeef/example.py) for examples on how to setup the menu
 5. Add `/menu/` to a `.gitignore` file as it should not be pushed to your own git repository, do this for every `.gitignore`.
 
 #### Using PyPI
@@ -98,8 +113,9 @@ Users that clone afterwards will need following steps:
 The steps for all of this can be found at [Git - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 
 #### Using setup file to install
-This method is not yet supported even though there is a [setup.py](/setup.py) file in the project.
-The reason for this is that there are some information missing in the [setup.py](/setup.py) file.
+1. Change directory to `src/menu_zerobeef`.
+2. Run `python setup.py install` to install.
+3. The project should be installed now.
 
 ### Previews
 #### Example 1
@@ -124,3 +140,4 @@ The reason for this is that there are some information missing in the [setup.py]
 The program was licensed under the MIT license,
 for more information see [LICENSE.md](/LICENSE.md)
 or visit [choosealicense.com](https://choosealicense.com/licenses/mit/).
+

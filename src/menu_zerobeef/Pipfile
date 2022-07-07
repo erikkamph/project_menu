@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+asttokens = "==2.0.5"
+colorama = "==0.4.5"
+executing = "==0.8.3"
+icecream = "==2.1.2"
+pygments = "==2.12.0"
+six = "==1.16.0"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
