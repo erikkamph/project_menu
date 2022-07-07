@@ -124,14 +124,14 @@ class ItemSingleSelection(MenuItem):
     """
 
     def __init__(self, title, position):
-        MenuItem.__init__(self, None, title, position, None)
+        super().__init__(None, title, position, None)
         self.single_choice = True
 
     def __str__(self):
         return f"{self.title} <-" if self.is_active else f"{self.title}"
 
     def get_style(self):
-        return MenuItem.get_style(self)
+        return super().get_style()
 
 
 class ItemMultiSelection(MenuItem):
@@ -153,7 +153,7 @@ class ItemMultiSelection(MenuItem):
     """
 
     def __init__(self, title, position):
-        MenuItem.__init__(self, None, title, position, None)
+        super().__init__(None, title, position, None)
         self.is_selected = False
         curses.init_pair(12, curses.COLOR_GREEN, curses.COLOR_BLACK)
         curses.init_pair(13, curses.COLOR_GREEN, -1)
@@ -182,6 +182,6 @@ class ItemMultiSelection(MenuItem):
         selected and active, then different styles
         are applited to the menu item.
         """
-        return MenuItem.get_style(self) if not self.is_selected else\
+        return super().get_style() if not self.is_selected else\
             curses.color_pair(13) if self.is_selected and not self.is_active else\
             curses.color_pair(12) + curses.A_BOLD
