@@ -117,6 +117,7 @@ The steps for all of this can be found at [Git - Submodules](https://git-scm.com
 1. Change directory to `src/menu_zerobeef`.
 2. Run `python setup.py install` to install.
 3. The project should be installed now.
+4. See step 3 and 4 under [Cloning and installing](#cloning-and-installing)
 
 ### Previews
 #### Example 1
