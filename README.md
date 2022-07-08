@@ -1,26 +1,38 @@
+# Curses Menu
+A simple menu application for command line enthusiasts written in Python
+using curses to be able to write on screen. There are three different types
+of menus that is available to the end user for the moment, these are:
+1. Simple menu
+2. Single selection menu
+3. Multi selection menu
+
 ## Table of contents
 1. [TODO](#todo)
-2. [Project Structure](#project-structure)
+2. [Releases](#releases)
+3. [Project Structure](#project-structure)
     1. [Examples](#examples)
     2. [Menu and data](#menu-and-data)
     3. [Requirements](#requirements)
-3. [Installation](#installation)
+4. [Installation](#installation)
     1. [Cloning the project and installing](#cloning-and-installing)
     2. [Using PyPI (Not yet supported)](#using-pypi)
     3. [As a submodule in your own project](#creating-a-submodule-in-project)
     4. [Using setup.py to install (Not yet supported)](#using-setup-file-to-install)
-4. [Previews](#previews)
+5. [Previews](#previews)
     1. [Example 1](#example-1)
     2. [Example 2](#example-2)
     3. [Example 3](#example-3)
     4. [Example 4](#example-4)
     5. [Example 5](#example-5)
     6. [Example 6](#example-6)
-5. [License](#license)
+6. [License](#license)
 
 ### TODO
 - [ ] Fix [setup.py](/src/menu_zerobeef/setup.py)
 - [ ] Fix bugs that might appear over time
+
+### Releases
+[Lastest Release](https://github.com/erikkamph/project_menu/releases/latest)
 
 ### Project Structure
 ```
