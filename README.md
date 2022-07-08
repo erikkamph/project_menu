@@ -9,6 +9,7 @@ of menus that is available to the end user for the moment, these are:
 ![This project is using python](http://ForTheBadge.com/images/badges/made-with-python.svg)<br>
 
 [![project_menu license information](https://img.shields.io/github/license/erikkamph/project_menu.svg)](/LICENSE.md)
+[![Issues](https://img.shields.io/github/issues/{username}/{repo-name}.svg)](https://github.com/erikkamph/project_menu/issues)
 
 ## Table of contents
 1. [TODO](#todo)
