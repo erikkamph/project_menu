@@ -11,6 +11,7 @@ of menus that is available to the end user for the moment, these are:
 [![project_menu license information](https://img.shields.io/github/license/erikkamph/project_menu.svg)](/LICENSE.md)
 [![Issues](https://img.shields.io/github/issues/erikkamph/project_menu.svg)](https://github.com/erikkamph/project_menu/issues)
 [![release](https://img.shields.io/github/realeses/erikkamph/project_menu.svg)](https://github.com/erikkamph/project_menu/releases/latest)
+
 ## Table of contents
 1. [TODO](#todo)
 2. [Project Structure](#project-structure)
