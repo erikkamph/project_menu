@@ -7,6 +7,7 @@ of menus that is available to the end user for the moment, these are:
 3. Multi selection menu
 
 [releases/latest](https://github.com/erikkamph/project_menu/releases/latest)
+[![project_menu license information](https://img.shields.io/github/license/erikkamph/project_menu.svg)](/LICENSE.md)
 
 ## Table of contents
 1. [TODO](#todo)
