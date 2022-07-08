@@ -6,8 +6,8 @@ of menus that is available to the end user for the moment, these are:
 2. Single selection menu
 3. Multi selection menu
 
-[releases/latest](https://github.com/erikkamph/project_menu/releases/latest)
 [![project_menu license information](https://img.shields.io/github/license/erikkamph/project_menu.svg)](/LICENSE.md)
+![This project is using python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 ## Table of contents
 1. [TODO](#todo)
