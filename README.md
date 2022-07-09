@@ -6,11 +6,10 @@ of menus that is available to the end user for the moment, these are:
 2. Single selection menu
 3. Multi selection menu
 
-![This project is using python](http://ForTheBadge.com/images/badges/made-with-python.svg)<br>
-
 [![project_menu license information](https://img.shields.io/github/license/erikkamph/project_menu.svg)](/LICENSE.md)
 [![Issues](https://img.shields.io/github/issues/erikkamph/project_menu.svg)](https://github.com/erikkamph/project_menu/issues)
 [![commits-since](https://img.shields.io/github/commits-since/erikkamph/project_menu/0.1.svg)](https://github.com/erikkamph/project_menu/releases/latest)
+![Made with python](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)
 
 ## Table of contents
 1. [TODO](#todo)
