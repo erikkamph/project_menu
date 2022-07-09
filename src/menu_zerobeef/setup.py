@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="menu",
-    version="1.0.0",
+    version="0.2",
     author="Erik",
     author_email="zerobeef@icloud.com",
     description="A simple menu program for command line enthusiasts made possible using curses",
