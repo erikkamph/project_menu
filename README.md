@@ -12,8 +12,6 @@ of menus that is available to the end user for the moment, these are:
 [![Issues](https://img.shields.io/github/issues/erikkamph/project_menu.svg)](https://github.com/erikkamph/project_menu/issues)
 [![commits-since](https://img.shields.io/github/commits-since/erikkamph/project_menu/0.1.svg)](https://github.com/erikkamph/project_menu/releases/latest)
 
-![Starchart](https://img.shields.io/github/realese/erikkamph/project_menu.svg)
-
 ## Table of contents
 1. [TODO](#todo)
 2. [Project Structure](#project-structure)
