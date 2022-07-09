@@ -2,9 +2,12 @@
 TODO: Write a docstring
 """
 import curses
+
 from icecream import ic
-from data import MenuItem, ItemSingleSelection, ItemMultiSelection
-from menu import ApplicationMenu
+
+from menu_zerobeef.data import (ItemMultiSelection, ItemSingleSelection,
+                                MenuItem)
+from menu_zerobeef.menu import ApplicationMenu
 
 
 def multi_selection(stdscr):

@@ -22,14 +22,15 @@ of menus that is available to the end user for the moment, these are:
     2. [Using PyPI (Not yet supported)](#using-pypi)
     3. [As a submodule in your own project](#creating-a-submodule-in-project)
     4. [Using setup.py to install (Not yet supported)](#using-setup-file-to-install)
-4. [Previews](#previews)
+4. [Example Code](#example-code)
+5. [Previews](#previews)
     1. [Example 1](#example-1)
     2. [Example 2](#example-2)
     3. [Example 3](#example-3)
     4. [Example 4](#example-4)
     5. [Example 5](#example-5)
     6. [Example 6](#example-6)
-5. [License](#license)
+6. [License](#license)
 
 ### TODO
 - [ ] Fix [setup.py](/src/menu_zerobeef/setup.py)
@@ -69,6 +70,7 @@ that are available are:
 1. Menu with submenu
 2. Single selection menu
 3. Multiple selection menu
+A quicker example can be found under [Example Code](#example-code).
 
 #### Menu and data
 [menu.py](/src/menu_zerobeef/menu.py) and [data.py](/src/menu_zerobeef/data.py) contains the necceessary information
@@ -95,18 +97,14 @@ When installing in your own project, be sure to follow one of following steps:
 1. [Cloning the project and installing](#cloning-and-installing)
 2. [Using PyPI (Not yet supported)](#using-pypi)
 3. [As a submodule in your own project](#creating-a-submodule-in-project)
-4. [Using setup.py to install (Not yet supported)](#using-setup-file-to-install)
+4. [Using setup.py to install](#using-setup-file-to-install)
+5. [Using a release file from the repository](#using-a-release-file)
 
 #### Cloning and installing
 1. Change directory to your own project where you are going to use the module
 2. `git clone https://github.com/erikkamph/project_menu`
-3. Add following lines to the file(s) where you are going to use the menu:
-```python
-from project_menu.src.menu_zerobeef.data import MenuItem, ItemSingleSelection, ItemMultiSelection
-from project_menu.src.menu_zerobeef.menu import ApplicationMenu
-```
-4. See [example.py](/src/menu_zerobeef/example.py) for examples on how to setup the menu
-5. Add `/project_menu/` to a `.gitignore` file as it should not be pushed to your own git repository, do this for every `.gitignore`.
+3. Add `/project_menu/` to a `.gitignore` file as it should not be pushed to your own git repository, do this for every `.gitignore`.
+4. See [Example Code](#example-code) and see what you need to change and how to use.
 
 #### Using PyPI
 This method is not yet supported.
@@ -115,7 +113,8 @@ This method is not yet supported.
 1. Enter the same git directory as your own project you want to add this to
 2. Execute following `git submodule add https://github.com/erikkamph/project_menu`. This will add the project as a submodule for your project.
 3. Check that it has been added by running `git status`
-4. Follow installation steps from 3 and forward under [Cloning and installing](#cloning-and-installing)
+4. See [Example Code](#example-code) and see what you need to change to import it properly
+5. Good work! You can now use the classes to create a menu.
 
 ##### Important regarding submodules
 None of the code will follow for users of your project when using submodules.
@@ -130,7 +129,41 @@ The steps for all of this can be found at [Git - Submodules](https://git-scm.com
 1. Change directory to `src/menu_zerobeef`.
 2. Run `python setup.py install` to install.
 3. The project should be installed now.
-4. See step 3 and 4 under [Cloning and installing](#cloning-and-installing)
+4. See [Example Code](#example-code)
+
+#### Using a release file
+1. Go to [releases]()
+2. Download the latest file that ends in `.whl`
+3. In your project, if it has venv activate it.
+4. `pip install <path_to_whl>` where `<path_to_whl>` is the path to the newly downloaded `.whl` file.
+5. See [Example Code](#example-Code) for examples
+6. You should be good to go.
+
+### Example Code
+The following is an example that can be used to
+show how to implement the menu. If you the project
+using local methods such as `git submodule` or `git clone`,
+ you might have to change the first two rows from saying
+ `from menu_zerobeef.data` in the beginning to
+ `from project_menu.src.menu_zerobeef.data`.
+````python
+from menu_zerobeef.data import (ItemMultiSelection, ItemSingleSelection,
+                                MenuItem)
+from menu_zerobeef.menu import ApplicationMenu
+import curses
+
+
+def test(stdscr):
+    curses.start_color()
+    curses.use_default_colors()
+    menu_title = "Muti Selection Test"
+    items = [ItemMultiSelection(str(i), i) for i in range(0, 33)]
+    test = ApplicationMenu(stdscr, (items, menu_title))
+    test.show_menu()
+
+
+curses.wrapper(test)
+```
 
 ### Previews
 #### Example 1

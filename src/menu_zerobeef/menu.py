@@ -3,7 +3,8 @@ This module is used for creating and showing menus.
 """
 import curses
 
-from data import ItemMultiSelection, ItemSingleSelection, MenuItem
+from menu_zerobeef.data import (ItemMultiSelection, ItemSingleSelection,
+                                MenuItem)
 
 
 class ApplicationMenu():

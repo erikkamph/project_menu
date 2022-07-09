@@ -3,7 +3,9 @@
 import curses
 
 from icecream import ic
-from example import multi_selection, normal_menu, single_selection
+
+from menu_zerobeef.example import (multi_selection, normal_menu,
+                                   single_selection)
 
 menus = {1: normal_menu, 2: single_selection, 3: multi_selection}
 
