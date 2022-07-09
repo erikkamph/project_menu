@@ -90,7 +90,7 @@ icecream==2.1.2
 Pygments==2.12.0
 six==1.16.0
 ```
-More requirements can be found in [requirements.txt](/src/menu_zerobeef/requirements.txt)
+More requirements can be found in [requirements.txt](/requirements.txt)
 
 ### Installation
 When installing in your own project, be sure to follow one of following steps:
