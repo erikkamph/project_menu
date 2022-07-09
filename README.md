@@ -146,7 +146,7 @@ using local methods such as `git submodule` or `git clone`,
  you might have to change the first two rows from saying
  `from menu_zerobeef.data` in the beginning to
  `from project_menu.src.menu_zerobeef.data`.
-````python
+```python
 from menu_zerobeef.data import (ItemMultiSelection, ItemSingleSelection,
                                 MenuItem)
 from menu_zerobeef.menu import ApplicationMenu
