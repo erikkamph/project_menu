@@ -34,6 +34,7 @@ of menus that is available to the end user for the moment, these are:
 
 ### TODO
 - [ ] Fix [setup.py](/src/menu_zerobeef/setup.py)
+- [ ] Add feature that makes the menu scrollable
 - [ ] Fix bugs that might appear over time
 
 ### Project Structure
