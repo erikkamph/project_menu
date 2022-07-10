@@ -107,7 +107,7 @@ When installing in your own project, be sure to follow one of following steps:
 4. See [Example Code](#example-code) and see what you need to change and how to use.
 
 #### Using PyPI
-This method is not yet supported.
+[pypi.org/project/menu-zerobeef](https://pypi.org/project/menu-zerobeef/)
 
 #### Creating a submodule in project
 1. Enter the same git directory as your own project you want to add this to
