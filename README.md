@@ -167,22 +167,22 @@ curses.wrapper(test)
 
 ### Previews
 #### Example 1
-![Example 1](/images/Example1.png)
+![Example 1](https://github.com/erikkamph/project_menu/blob/cc9afc3761f3e09ab285ebd130aef7c5ed307781/images/Example1.png)
 
 #### Example 2
-![Example 2](/images/Example2.png)
+![Example 2](https://github.com/erikkamph/project_menu/blob/cc9afc3761f3e09ab285ebd130aef7c5ed307781/images/Example2.png)
 
 #### Example 3
-![Example 3](/images/Example3.png)
+![Example 3](https://github.com/erikkamph/project_menu/blob/cc9afc3761f3e09ab285ebd130aef7c5ed307781/images/Example3.png)
 
 #### Example 4
-![Example 4](/images/Example4.png)
+![Example 4](https://github.com/erikkamph/project_menu/blob/cc9afc3761f3e09ab285ebd130aef7c5ed307781/images/Example4.png)
 
 #### Example 5
-![Example 5](/images/Example5.png)
+![Example 5](https://github.com/erikkamph/project_menu/blob/cc9afc3761f3e09ab285ebd130aef7c5ed307781/images/Example5.png)
 
 #### Example 6
-![Example 6](/images/Example6.png)
+![Example 6](https://github.com/erikkamph/project_menu/blob/cc9afc3761f3e09ab285ebd130aef7c5ed307781/images/Example6.png)
 
 ### License
 The program was licensed under the MIT license,
