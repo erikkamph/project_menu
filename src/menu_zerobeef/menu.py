@@ -2,9 +2,9 @@
 This module is used for creating and showing menus.
 """
 import curses
+import os
 
-from menu_zerobeef.data import (ItemMultiSelection, ItemSingleSelection,
-                                MenuItem)
+from data import ItemMultiSelection, ItemSingleSelection, MenuItem
 
 
 class ApplicationMenu():
@@ -88,8 +88,11 @@ class ApplicationMenu():
         self.menu_title = args[1]
         self.loop = True
         self.init_scr_x = args[2] if len(args) > 2 else 1
-        self.init_scr_y = args[3] if len(args) > 3 else 2
+        self.init_scr_y = args[3] if len(args) > 3 else 1
         curses.init_pair(1, curses.COLOR_BLACK, -1)
+        self.rows, self.columns = os.popen("stty size", "r").read().split()
+        self.rows, self.columns = int(self.rows), int(self.columns)
+        self.offset = 0
 
     def show_menu(self):
         """
@@ -117,16 +120,44 @@ class ApplicationMenu():
         self.remark_items()
         while self.loop:
             self.stdscr.clear()
-            self.stdscr.addstr(self.init_scr_y, self.init_scr_x,
-                               self.menu_title,
+            self.stdscr.addstr(self.init_scr_y, self.init_scr_x, self.menu_title,
                                curses.color_pair(1) + curses.A_BOLD)
-            for k, menu_item in enumerate(self.items):
+            for k, menu_item in enumerate(self.get_items_from_offset()):
                 self.stdscr.addstr(self.init_scr_y + 1 + k, self.init_scr_x,
                                    menu_item.title if menu_item.title in ("Cancel", "Done")\
                                    else str(menu_item), menu_item.get_style())
+            self.remark_items()
+            """ DEBUGGING CODE BLOCK BEGIN """
+            #self.stdscr.addstr(self.init_scr_y + self.rows,\
+            #                   self.init_scr_x,\
+            #                   f"Cursor Position: {self.cursor_position}",\
+            #                   curses.A_BOLD)
+            """ DEBUGGING CODE BLOCK END """
             data = self.actions()
         if data is not None:
             return data
+
+    def get_items_from_offset(self):
+        if self.cursor_position - self.offset >= self.rows - 1\
+            and self.offset + self.rows - 1 <= len(self.items):
+            self.offset += 1
+            if self.cursor_position < len(self.items) - 1:
+                self.cursor_position += 1
+        elif self.cursor_position < self.offset\
+            and self.offset > 0:
+            self.offset -= 1
+        start, end = self.offset, self.offset + (self.rows - 1)
+        """ BEGIN CODE BLOCK FOR DEBUGGING SCROLL """
+        #self.stdscr.addstr(self.init_scr_y + self.rows + 1,\
+        #                   self.init_scr_x,\
+        #                   f"Offset start: {start}",\
+        #                   curses.A_BOLD)
+        #self.stdscr.addstr(self.init_scr_y + self.rows + 2,\
+        #                   self.init_scr_x,\
+        #                   f"Offset end: {end}",\
+        #                   curses.A_BOLD)
+        """ END CODE BLOCK FOR DEBUGGING SCROLL """
+        return self.items[start:end]
 
     def actions(self):
         """
@@ -144,10 +175,9 @@ class ApplicationMenu():
             return None
 
         if key in ("KEY_UP", "KEY_DOWN"):
-            self.cursor_position = (self.cursor_position + 1) % len(self.items)\
-                if key == "KEY_DOWN" else (self.cursor_position - 1) % len(self.items)\
-                if key == "KEY_UP" else self.cursor_position
-            self.remark_items()
+            self.cursor_position = (self.cursor_position + 1) if key == "KEY_DOWN"\
+                and self.cursor_position <= (self.rows - 2) else (self.cursor_position - 1)\
+                if key == "KEY_UP" and self.cursor_position > 0 else self.cursor_position
 
         if isinstance(current_item, MenuItem) and key == "\n"\
                 and not isinstance(current_item, ItemSingleSelection)\

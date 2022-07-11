@@ -5,9 +5,8 @@ import curses
 
 from icecream import ic
 
-from menu_zerobeef.data import (ItemMultiSelection, ItemSingleSelection,
-                                MenuItem)
-from menu_zerobeef.menu import ApplicationMenu
+from data import ItemMultiSelection, ItemSingleSelection, MenuItem
+from menu import ApplicationMenu
 
 
 def multi_selection(stdscr):
@@ -81,4 +80,13 @@ def normal_menu(stdscr):
     menu = [MenuItem(*t, k, None) for k, t in enumerate(items)]
     menu_title = "Main menu"
     menu = ApplicationMenu(stdscr, (menu, menu_title))
+    return menu.show_menu()
+
+def scroll_test(stdscr):
+    curses.start_color()
+    curses.use_default_colors()
+    menu_items = [ItemSingleSelection(str(p), p) for p in range(0, 32)]
+    title = "Scrolling menu test"
+    menu = ApplicationMenu(stdscr, (menu_items, title))
+    menu.rows = 16
     return menu.show_menu()
